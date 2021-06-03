@@ -7,4 +7,4 @@ before_install:
   - docker build -t dylanthomas/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run dylanthomas/docker-react npm run test -- --coverage
+  - docker run -e CI=true dylanthomas/docker-react npm run test
